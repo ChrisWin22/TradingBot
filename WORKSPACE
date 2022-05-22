@@ -5,6 +5,7 @@ workspace(name = "alpaca_cpp_starter_template")
 ################################################################################
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 ################################################################################
 # C++ Dependencies
@@ -19,3 +20,14 @@ http_archive(
 )
 load("@com_github_marpaia_alpaca_trade_api_cpp//bazel:deps.bzl", "alpaca_deps")
 alpaca_deps()
+
+# alternative alpaca-trade-api-cpp is a C++ client library for the Alpaca Trading API.
+#http_archive(
+#    name = "com_github_marpaia_alpaca_trade_api_cpp",
+#    strip_prefix = "alpaca-trade-api-cpp-master",
+#    urls = ["https://github.com/aidanjalili/alpaca-trade-api-cpp/archive/master.tar.gz"],
+#)
+#load("@com_github_marpaia_alpaca_trade_api_cpp//bazel:deps.bzl", "alpaca_deps")
+#alpaca_deps()
+
+
